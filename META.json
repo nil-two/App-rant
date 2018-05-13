@@ -53,6 +53,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/kusabashira/App-rant/issues"
+      },
+      "homepage" : "https://github.com/kusabashira/App-rant",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/kusabashira/App-rant.git",
+         "web" : "https://github.com/kusabashira/App-rant"
+      }
+   },
    "version" : "0.01",
    "x_serialization_backend" : "JSON::PP version 2.94"
 }
