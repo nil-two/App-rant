@@ -1,0 +1,104 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use utf8;
+use App::rant;
+use Encode qw(encode_utf8 decode_utf8);
+use Getopt::Long qw(:config posix_default no_ignore_case gnu_compat bundling);
+use Pod::Usage;
+use String::Random;
+
+binmode STDIN,  ":utf8";
+binmode STDOUT, ":utf8";
+binmode STDERR, ":utf8";
+
+GetOptions(
+    "e|expression=s" => \my $raw_expression,
+    "c|count=i"      => \my $raw_count,
+    "s|separator=s"  => \my $raw_separator,
+    "help"           => \my $is_help,
+    "version",       => \my $is_version,
+) or pod2usage 2;
+
+if (defined $is_help) {
+    pod2usage 0;
+}
+if (defined $is_version) {
+    print STDERR "$App::rant::VERSION\n";
+    exit 0;
+}
+
+my $expression = decode_utf8($raw_expression) // "\\w{8}";
+my $count      = $raw_count                   // 1;
+my $separator  = decode_utf8($raw_separator)  // "\n";
+
+my $random = String::Random->new;
+for (my $i = 0; $i < $count; $i++) {
+    if ($i != 0) {
+        print $separator;
+    }
+    print $random->randregex($expression);
+}
+if ($count > 0) {
+    print "\n";
+}
+
+=head1 NAME
+
+rant - generate a random text from the regex
+
+=head1 SYNOPSIS
+
+rant [OPTIONS]...
+
+=head1 DESCRIPTION
+
+The command prints a random text from the regex.
+
+=head1 OPTIONS
+
+=head2 -e, --expression=regex
+
+The regex to generate a text (default: '\w{8}')
+
+Following grammers are supported:
+
+  \w    Alphanumeric + "_"
+  \d    Digits
+  \W    Printable characters other than those in \w
+  \D    Printable characters other than those in \d
+  .     Printable characters
+  []    Character classes
+  {}    Repetition
+  *     Same as {0,}
+  ?     Same as {0,1}
+  +     Same as {1,}
+
+=head2 -c, --count=n
+
+Print random texts n times (default: 1)
+
+=head2 -s, --separator=sep
+
+Print sep between each text (default: '\n')
+
+=head2 --help
+
+Display this help and exit
+
+=head2 --version
+
+Display version information and exit
+
+=head1 LICENSE
+
+Copyright (C) nil2.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=head1 AUTHOR
+
+nil2 E<lt>nil2@nil2.orgE<gt>
+
+=cut
