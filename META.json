@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "generate a random text from the regex",
    "author" : [
       "nil2 <nil2@nil2.org>"
    ],
@@ -42,6 +42,7 @@
       },
       "runtime" : {
          "requires" : {
+            "String::Random" : "0.29",
             "perl" : "5.008001"
          }
       },
