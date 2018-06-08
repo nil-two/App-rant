@@ -2,7 +2,6 @@
 use strict;
 use warnings;
 use utf8;
-use App::rant;
 use Encode qw(encode_utf8 decode_utf8);
 use Getopt::Long qw(:config posix_default no_ignore_case gnu_compat bundling);
 use Pod::Usage;
@@ -17,15 +16,10 @@ GetOptions(
     "c|count=i"      => \my $raw_count,
     "s|separator=s"  => \my $raw_separator,
     "help"           => \my $is_help,
-    "version",       => \my $is_version,
 ) or pod2usage 2;
 
 if (defined $is_help) {
     pod2usage 0;
-}
-if (defined $is_version) {
-    print STDERR "$App::rant::VERSION\n";
-    exit 0;
 }
 
 my $expression = decode_utf8($raw_expression) // "\\w{8}";
@@ -85,10 +79,6 @@ Print sep between each text (default: '\n')
 =head2 --help
 
 Display this help and exit
-
-=head2 --version
-
-Display version information and exit
 
 =head1 LICENSE
 

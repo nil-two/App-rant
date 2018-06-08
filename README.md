@@ -111,10 +111,6 @@ Print sep between each text (default: \`\\n\`)
 
 Display usage and exit.
 
-## --version
-
-Display version information and exit.
-
 # LICENSE
 
 Copyright (C) nil2.

@@ -3,7 +3,7 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 1;
 __END__
@@ -122,10 +122,6 @@ Print sep between each text (default: `\n`)
 =head2 --help
 
 Display usage and exit.
-
-=head2 --version
-
-Display version information and exit.
 
 =head1 LICENSE
 

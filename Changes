@@ -2,6 +2,10 @@ Revision history for Perl extension App-rant
 
 {{$NEXT}}
 
+0.02 2018-06-08T03:17:15Z
+
+    - remove '--version'
+
 0.01 2018-05-13T04:09:32Z
 
     - original version
