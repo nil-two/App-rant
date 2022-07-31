@@ -20,11 +20,11 @@ App::rant is a script to generate a random text from the regex.
 
 ## With cpanm
 
-    cpanm git://github.com/kusabashira/App-rant
+    cpanm git://github.com/nil2nekoni/App-rant
 
 ## From source
 
-    git clone git://github.com/kusabashira/App-rant
+    git clone git://github.com/nil2nekoni/App-rant
     cd App-rant
     perl Build.PL
     ./Build

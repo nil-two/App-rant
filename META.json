@@ -55,13 +55,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kusabashira/App-rant/issues"
+         "web" : "https://github.com/nil2nekoni/App-rant/issues"
       },
-      "homepage" : "https://github.com/kusabashira/App-rant",
+      "homepage" : "https://github.com/nil2nekoni/App-rant",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/kusabashira/App-rant.git",
-         "web" : "https://github.com/kusabashira/App-rant"
+         "url" : "git://github.com/nil2nekoni/App-rant.git",
+         "web" : "https://github.com/nil2nekoni/App-rant"
       }
    },
    "version" : "0.02",
