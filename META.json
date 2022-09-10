@@ -55,13 +55,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/nil2nekoni/App-rant/issues"
+         "web" : "https://github.com/nil-two/App-rant/issues"
       },
-      "homepage" : "https://github.com/nil2nekoni/App-rant",
+      "homepage" : "https://github.com/nil-two/App-rant",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/nil2nekoni/App-rant.git",
-         "web" : "https://github.com/nil2nekoni/App-rant"
+         "url" : "git://github.com/nil-two/App-rant.git",
+         "web" : "https://github.com/nil-two/App-rant"
       }
    },
    "version" : "0.02",
